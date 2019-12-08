@@ -1,15 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Xebia.WebinarWeek.Models;
 
-namespace Xebia.WebinarWeek
+namespace Xebia.WebinarWeek.Planets
 {
-    public class StarWarsPlanetProvider
+    public class StarWarsPlanetProvider : IPlanetProvider
     {
-        private static readonly HttpClient _httpClient = new HttpClient();
+        private readonly HttpClient _httpClient;
 
-        public async Task<List<Planet>> GetPlanets(string planetProviderUri = "https://swapi.co/api/planets")
+        public StarWarsPlanetProvider(IHttpClientFactory httpClientFactory)
+        {
+            _httpClient = httpClientFactory.CreateClient();
+        }
+
+        public async Task<List<Planet>> GetPlanets()
+        {
+            var planetProviderUri = Environment.GetEnvironmentVariable("PlanetProviderUri");
+
+            return await GetPlanets(planetProviderUri);
+        }
+
+        private async Task<List<Planet>> GetPlanets(string planetProviderUri)
         {
             var planets = new List<Planet>();
             var responseMessage = await _httpClient.GetAsync(planetProviderUri);

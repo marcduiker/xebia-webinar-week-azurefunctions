@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Xebia.WebinarWeek.Models
+namespace Xebia.WebinarWeek.Planets
 {
     public class Planet
     {

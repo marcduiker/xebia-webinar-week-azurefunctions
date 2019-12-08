@@ -6,11 +6,16 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 
-namespace Xebia.WebinarWeek
+namespace Xebia.WebinarWeek.Planets
 {
     public class GetPlanetsHttp
     {
-        private readonly StarWarsPlanetProvider _planetProvider = new StarWarsPlanetProvider();
+        private readonly IPlanetProvider _planetProvider;
+
+        public GetPlanetsHttp(IPlanetProvider planetProvider)
+        {
+            _planetProvider = planetProvider;
+        }
         
         [FunctionName(nameof(GetPlanetsHttp))]
         public async Task<IActionResult> Run(

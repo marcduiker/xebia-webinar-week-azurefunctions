@@ -1,0 +1,6 @@
+## Movies
+GET http://localhost:7071/api/movies
+
+### Planets
+
+GET http://localhost:7071/api/planets

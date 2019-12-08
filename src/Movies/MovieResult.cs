@@ -1,11 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Xebia.WebinarWeek.Models
+namespace Xebia.WebinarWeek.Movies
 {
-    public class PlanetResult
+    public class MovieResult
     {
-
         [JsonProperty("count")]
         public int Count { get; set; }
 
@@ -13,6 +12,6 @@ namespace Xebia.WebinarWeek.Models
         public string Next { get; set; }
 
         [JsonProperty("results")]
-        public IEnumerable<Planet> Results { get; set; }
+        public IEnumerable<Movie> Results { get; set; }
     }
 }

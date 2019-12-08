@@ -5,6 +5,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
+using System.Linq;
 
 namespace Xebia.WebinarWeek.Movies
 {
@@ -26,7 +27,8 @@ namespace Xebia.WebinarWeek.Movies
             try
             {
                 var movies = await _movieProvider.GetMovies();
-                functionResult = new OkObjectResult(movies);
+                var orderedMovies = movies.OrderBy(m => m.Episode);
+                functionResult = new OkObjectResult(orderedMovies);
             }
             catch (HttpRequestException e)
             {

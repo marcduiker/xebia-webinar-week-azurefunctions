@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 using System.Linq;
+using System;
 
 namespace Xebia.WebinarWeek.Movies
 {
@@ -30,7 +31,7 @@ namespace Xebia.WebinarWeek.Movies
                 var orderedMovies = movies.OrderBy(m => m.Episode);
                 functionResult = new OkObjectResult(orderedMovies);
             }
-            catch (HttpRequestException e)
+            catch (Exception e)
             {
                 functionResult = new ObjectResult(e.Message) { StatusCode = 500 };
             }

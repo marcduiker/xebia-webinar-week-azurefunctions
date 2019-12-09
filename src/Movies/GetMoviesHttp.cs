@@ -4,7 +4,6 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using System.Net.Http;
 using System.Linq;
 using System;
 
@@ -12,12 +11,7 @@ namespace Xebia.WebinarWeek.Movies
 {
     public class GetMoviesHttp
     {
-        private readonly IMovieProvider _movieProvider;
-
-        public GetMoviesHttp(IMovieProvider movieProvider)
-        {
-            _movieProvider = movieProvider;
-        }
+        private readonly StarWarsMovieProvider _movieProvider = new StarWarsMovieProvider();
         
         [FunctionName(nameof(GetMoviesHttp))]
         public async Task<IActionResult> Run(

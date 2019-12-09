@@ -4,7 +4,7 @@ This repository contains a .NET Core Azure Function App which will be refactored
 
 |Branch name| Versions | Uses DI |
 |-|-|-|
-| development-v2-start | .NET Core 2 / Azure Function 2 | No
-| development-v2 | .NET Core v2 / Azure Function 2 | Yes
-| development-v3-start | .NET Core 3 / Azure Function 3 | No
-| development-v3 | .NET Core 3 / Azure Function 3 | Yes
+| development-v2-start | .NET Core 2 / Azure Functions 2 | No
+| development-v2 | .NET Core 2 / Azure Functions 2 | Yes
+| development-v3-start | .NET Core 3 / Azure Functions 3 | No
+| development-v3 | .NET Core 3 / Azure Functions 3 | Yes

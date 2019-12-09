@@ -11,7 +11,7 @@ namespace Xebia.WebinarWeek
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddHttpClient();
-            builder.Services.AddTransient<IMovieProvider, StarWarsMovieProvider>();
+            builder.Services.AddSingleton<IMovieProvider, StarWarsMovieProvider>();
         }
     }
 }

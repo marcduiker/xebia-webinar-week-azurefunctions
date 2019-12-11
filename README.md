@@ -1,6 +1,10 @@
 # How to use dependency injection in .NET Azure Functions 
 
-This repository contains a .NET Core Azure Function App which will be refactored to use dependency injection (DI) during a live webinar during [Xebia Webinar Week](https://pages.xebia.com/academy-webinar-week/dependency-injection-in-net-azure-functions).
+This repository contains several branches which can be used to illustrate what needs to be refactored in order to use dependency injection in a .NET Core Azure Functions project.
+
+This repository is used at a live webinar during [Xebia Webinar Week](https://pages.xebia.com/academy-webinar-week/dependency-injection-in-net-azure-functions).
+
+This is the `development-v2-start` branch which contains the initial solution, based on .NET Core 2. Use the refactoring instructions below in order to have the Function App use dependency injection.
 
 |Branch name| Versions | Uses DI |
 |-|-|-|

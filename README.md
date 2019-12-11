@@ -11,6 +11,13 @@ This repository contains a .NET Core Azure Function App which will be refactored
 
 ## Refactoring for .NET Core 2
 
+Ensure that the Azure Function App csproj file is set to the proper .NET Core and Azure Functions runtime versions:
+
+```xml
+<TargetFramework>netcoreapp2.2</TargetFramework>
+<AzureFunctionsVersion>v2</AzureFunctionsVersion>
+```
+
 ### Step 1: NuGet Packages
 
 - Add package `Microsoft.Azure.Functions.Extensions` v1.0.0

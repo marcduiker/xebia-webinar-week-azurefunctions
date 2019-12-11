@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace Xebia.WebinarWeek.Movies
 {
-    public class StarWarsMovieProvider : IMovieProvider
+    public class StarWarsMovieProvider
     {
-        private readonly HttpClient _httpClient;
-
-        public StarWarsMovieProvider(IHttpClientFactory httpClientFactory)
-        {
-            _httpClient = httpClientFactory.CreateClient();
-        }
+        private readonly HttpClient _httpClient = new HttpClient();
 
         public async Task<List<Movie>> GetMovies()
         {

@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace Xebia.WebinarWeek.Planets
 {
-    public class StarWarsPlanetProvider : IPlanetProvider
+    public class StarWarsPlanetProvider
     {
-        private readonly HttpClient _httpClient;
-
-        public StarWarsPlanetProvider(IHttpClientFactory httpClientFactory)
-        {
-            _httpClient = httpClientFactory.CreateClient();
-        }
+        private readonly HttpClient _httpClient = new HttpClient();
 
         public async Task<List<Planet>> GetPlanets()
         {

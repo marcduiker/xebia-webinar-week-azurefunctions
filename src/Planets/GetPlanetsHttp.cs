@@ -10,12 +10,7 @@ namespace Xebia.WebinarWeek.Planets
 {
     public class GetPlanetsHttp
     {
-        private readonly IPlanetProvider _planetProvider;
-
-        public GetPlanetsHttp(IPlanetProvider planetProvider)
-        {
-            _planetProvider = planetProvider;
-        }
+        private readonly StarWarsPlanetProvider _planetProvider = new StarWarsPlanetProvider();
         
         [FunctionName(nameof(GetPlanetsHttp))]
         public async Task<IActionResult> Run(

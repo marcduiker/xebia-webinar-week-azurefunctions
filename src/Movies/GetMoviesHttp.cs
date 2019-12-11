@@ -11,12 +11,7 @@ namespace Xebia.WebinarWeek.Movies
 {
     public class GetMoviesHttp
     {
-        private readonly IMovieProvider _movieProvider;
-
-        public GetMoviesHttp(IMovieProvider movieProvider)
-        {
-            _movieProvider = movieProvider;
-        }
+        private readonly StarWarsMovieProvider _movieProvider = new StarWarsMovieProvider();
         
         [FunctionName(nameof(GetMoviesHttp))]
         public async Task<IActionResult> Run(

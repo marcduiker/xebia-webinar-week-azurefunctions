@@ -8,7 +8,7 @@ Don't look at this master branch. Look at these branches instead:
 
 |Branch name| Versions | Uses DI |
 |-|-|-|
-| [development-v2-start](/tree/development-v2-start) | .NET Core 2 / Azure Functions 2 | No
-| [development-v2](/tree/development-v2) | .NET Core 2 / Azure Functions 2 | Yes
-| [development-v3-start](/tree/development-v3-start) | .NET Core 3 / Azure Functions 3 | No
-| [development-v3](/tree/development-v3) | .NET Core 3 / Azure Functions 3 | Yes
+| [development-v2-start](tree/development-v2-start) | .NET Core 2 / Azure Functions 2 | No
+| [development-v2](tree/development-v2) | .NET Core 2 / Azure Functions 2 | Yes
+| [development-v3-start](tree/development-v3-start) | .NET Core 3 / Azure Functions 3 | No
+| [development-v3](tree/development-v3) | .NET Core 3 / Azure Functions 3 | Yes

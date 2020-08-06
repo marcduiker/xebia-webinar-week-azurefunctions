@@ -1,0 +1,11 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "MovieProviderUri": "https://swapi.co/api/films",
+    "PlanetProviderUri": "https://swapi.co/api/planets",
+    "AzureWebJobs.GetPlanetsHttp.Disabled": true,
+    "FUNCTIONS_V2_COMPATIBILITY_MODE": true
+  }
+}
